@@ -1,0 +1,12 @@
+!*.py
+!*.xml
+!*.md
+!*/
+!*.jpg
+!*.png
+!state_center.npy
+!*.pdf
+keys.txt
+/.vscode
+/.venv
+*.jar
