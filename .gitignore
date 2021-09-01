@@ -2,7 +2,7 @@
 !*.xml
 !*.md
 !*/
-*.jpg
+**/*.jpg
 !*.png
 !state_center.npy
 !*.pdf
