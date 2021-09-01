@@ -1,1 +1,1 @@
-Sera este el dia
+Monografia final para la materia Redes Neuronales (86.54) de la Facultad de Ingenieria de la Universidad de Buenos Aires.
