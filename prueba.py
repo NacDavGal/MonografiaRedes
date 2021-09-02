@@ -1,4 +1,4 @@
-import tensorflow as tf
+#import tensorflow as tf
 import numpy as np
 import os
 import re
@@ -17,7 +17,7 @@ def get_files(cur_dir, regex):
     return out_files
 
 def get_file_prefix(filename):
-    return re.search('(.*/[a-z0-9A-Z_-]*)_[0-9]*.jpg', filename).group(1)
+    return re.search('(.*\\\\[a-z0-9A-Z_-]*)_[0-9]*.jpg', filename).group(1)
 
 def all_directions_exist(prefix):
     return (os.path.isfile(prefix + '_0.jpg') and
@@ -49,4 +49,16 @@ def read_grouped_filenames_and_labels(root):
 
 files, labels, all_labels = read_grouped_filenames_and_labels("50States2k_test\\test_data")
 
-print(files)
+n = 13299
+print(f"El archivo es : {files[n]} ")
+#print(files[n])
+print(f"Y está en {all_labels[labels[n]]}")
+#print(all_labels[labels[n]])
+
+#m = re.search('((?:[^\\]*\\)*).*.jpg', '50States2k_test\\test_data\\Alabama\\2007_-AQOXlx5fs1gPSRBUftj5w_0.jpg')
+#print(m)
+
+#n = re.search('(.*\\\\[a-z0-9A-Z_-]*)_[0-9]*.jpg','ricardo\\tuculo\\tuvieja_08.jpg')
+
+#print("La segunda oracion queda: ")
+#print(n.group(1))
