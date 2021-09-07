@@ -10,3 +10,4 @@ keys.txt
 /.vscode
 /.venv
 *.jar
+GEOLOC_*.py
