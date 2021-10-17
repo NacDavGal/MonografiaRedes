@@ -2,7 +2,7 @@ from operator import concat
 import tensorflow as tf
 
 from tensorflow.keras.layers import Input, Conv2D, ReLU, BatchNormalization,\
-                                    Add, AveragePooling2D, Flatten, Dense
+                                    Add, MaxPooling2D, Flatten, Dense
 from tensorflow.keras.models import Model
 
 
@@ -54,7 +54,7 @@ def sub_net():
             t = residual_block(t, downsample=(j==0 and i!=0), filters=num_filters)
         num_filters *= 2
     
-    t = AveragePooling2D(4)(t)
+    t = MaxPooling2D(4)(t)
     return t
 
 
