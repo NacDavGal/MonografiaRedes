@@ -107,8 +107,8 @@ def grouped_streetview_dataset(files, labels, batch_size, augment = True, shuffl
         return (normalize_image(n), normalize_image(e),
                 normalize_image(s), normalize_image(w))
     filename_dataset = tf.data.Dataset.from_tensor_slices(files)
-    d = filename_dataset.map(parse_images).prefetch(100)
-    daug = d.map(normalize_images).map(augment_images)
+    d = filename_dataset.map(parse_images).prefetch(100) # Devuelve una tupla
+    daug = d.map(normalize_images).map(augment_images) # 
     d = tf.data.Dataset.zip((filename_dataset, d, daug if augment else d.map(normalize_images),
                              tf.data.Dataset.from_tensor_slices(labels))).prefetch(100)
     if shuffle:

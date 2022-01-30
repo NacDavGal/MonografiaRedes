@@ -11,3 +11,4 @@ keys.txt
 /.venv
 *.jar
 GEOLOC_*.py
+50States2K_test/test_data.zip
